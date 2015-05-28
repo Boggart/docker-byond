@@ -2,7 +2,8 @@ FROM gliderlabs/alpine:latest
 MAINTAINER Boggart "github.com/Boggart"
 RUN apk add --update git && \
     cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
-    mkdir /usr/local/byond && cp -R cfg web bin man /usr/local/byond && \
+    mkdir /usr/local/byond && cd byond && cp -R cfg web bin man /usr/local/byond && \
+    cd .. && rm -rf ./byond && \
     ln -f -s /usr/local/byond/bin/DreamDaemon /usr/local/bin/DreamDaemon && \
     ln -f -s /usr/local/byond/bin/DreamDownload /usr/local/bin/DreamDownload && \
     ln -f -s /usr/local/byond/bin/DreamMaker /usr/local/bin/DreamMaker && \
