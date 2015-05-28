@@ -2,8 +2,8 @@ FROM progrium/busybox
 MAINTAINER Boggart "github.com/Boggart"
 RUN opkg-install wget git bash && \
     cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
-    mkdir /usr/local/byond && cd byond && cp -R cfg web bin man /usr/local/byond && \
-    cd .. && rm -rf ./byond && \
+    mkdir /usr/local && mkdir /usr/local/byond && cd byond && cp -R cfg web bin man /usr/local/byond && \
+    cd .. && rm -rf ./byond && mkdir /usr/local/bin && mkdir /usr/local/lib &&\
     ln -f -s /usr/local/byond/bin/DreamDaemon /usr/local/bin/DreamDaemon && \
     ln -f -s /usr/local/byond/bin/DreamDownload /usr/local/bin/DreamDownload && \
     ln -f -s /usr/local/byond/bin/DreamMaker /usr/local/bin/DreamMaker && \
