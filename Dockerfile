@@ -7,8 +7,6 @@ RUN apk add --update git && \
     ln -f -s /usr/local/byond/bin/DreamDaemon /usr/local/bin/DreamDaemon && \
     ln -f -s /usr/local/byond/bin/DreamDownload /usr/local/bin/DreamDownload && \
     ln -f -s /usr/local/byond/bin/DreamMaker /usr/local/bin/DreamMaker && \
-    ln -f -s /usr/local/byond/man/man6/DreamDaemon.6 /usr/share/man/man6/DreamDaemon.6 && \
-    ln -f -s /usr/local/byond/man/man6/DreamMaker.6 /usr/share/man/man6/DreamMaker.6 && \
     ln -f -s /usr/local/byond/bin/libbyond.so /usr/local/lib/libbyond.so && \
     ln -f -s /usr/local/byond/bin/libext.so /usr/local/lib/libext.so && \
     wget http://www.byond.com/download/build/gcc/libstdc++-libc6.2-2.so.3 && mv libstdc++-libc6.2-2.so.3 /usr/local/lib/libstdc++-libc6.2-2.so.3 && \
