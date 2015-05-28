@@ -7,8 +7,6 @@ RUN apt-get update && apt-get -y install wget unzip && \
     ln -f -s /usr/local/byond/bin/DreamDaemon /usr/local/bin/DreamDaemon && \
     ln -f -s /usr/local/byond/bin/DreamDownload /usr/local/bin/DreamDownload && \
     ln -f -s /usr/local/byond/bin/DreamMaker /usr/local/bin/DreamMaker && \
-    ln -f -s /usr/local/byond/man/man6/DreamDaemon.6 /usr/share/man/man6/DreamDaemon.6 && \
-    ln -f -s /usr/local/byond/man/man6/DreamMaker.6 /usr/share/man/man6/DreamMaker.6 && \
     ln -f -s /usr/local/byond/bin/libbyond.so /usr/local/lib/libbyond.so && \
     ln -f -s /usr/local/byond/bin/libext.so /usr/local/lib/libext.so && \
     adduser -D -s /bin/bash byond
