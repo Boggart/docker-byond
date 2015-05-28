@@ -1,6 +1,6 @@
 FROM debian:latest
 MAINTAINER Boggart "github.com/Boggart"
-RUN apt-get install git && \
+RUN apt-get update && apt-get install git && \
     cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
     mkdir /usr/local/byond && cd byond && cp -R cfg web bin man /usr/local/byond && \
     cd .. && rm -rf ./byond && \
