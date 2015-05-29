@@ -1,7 +1,7 @@
-FROM debian:latest
+FROM boggart/alpine-apk-static-32bit
 MAINTAINER Boggart "github.com/Boggart"
-RUN dpkg --add-architecture i386 && apt-get update && apt-get -y install glibc libgcc libstdc++ wget unzip && \
-    cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
+RUN ["/sbin/apk.static", "add", "--update", "alpine-base", "libc6-compat", "libgcc" ,"libstdc++" ,"wget", "unzip", "bash"]
+RUN cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
     mkdir /usr/local/byond && cd byond && cp -R cfg web bin man /usr/local/byond && \
     cd .. && rm -rf ./byond && \
     ln -f -s /usr/local/byond/bin/DreamDaemon /usr/local/bin/DreamDaemon && \
