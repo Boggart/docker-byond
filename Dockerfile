@@ -9,6 +9,6 @@ RUN cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.z
     ln -f -s /usr/local/byond/bin/DreamMaker /usr/local/bin/DreamMaker && \
     ln -f -s /usr/local/byond/bin/libbyond.so /usr/local/lib/libbyond.so && \
     ln -f -s /usr/local/byond/bin/libext.so /usr/local/lib/libext.so && \
-    useradd -ms /bin/bash byond
+    adduser -D -s /bin/bash byond
 USER byond
 CMD ["/usr/local/bin/gobyond.sh"]
