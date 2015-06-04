@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM ubuntu:latest
 MAINTAINER Boggart "github.com/Boggart"
 RUN dpkg --add-architecture i386 && apt-get update && apt-get -y install glibc:i386 libgcc:i386 libstdc++:i386 wget unzip && \
     cd ~/ && wget http://www.byond.com/download/build/507/507.1285_byond_linux.zip && unzip 507.1285_byond_linux.zip -d ./ && rm 507.1285_byond_linux.zip && \
